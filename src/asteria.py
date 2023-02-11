@@ -64,7 +64,7 @@ client = commands.Bot(
 async def on_ready(): # do this on startup
     # announces when the bot is up and running
     print(f"{client.user} is now online and is connected to " + str(len(client.guilds)) + " servers: ")
-    # list servers by server name where Pandora exists in on bootup.
+    # list servers by server name where Asteria exists in on bootup.
     # this is done to prevent unauthorised distribution of the bot into unknown servers.
     async for guild in client.fetch_guilds(limit=250):
         print(" - " + guild.name + " - " + str(guild.id))
@@ -111,7 +111,7 @@ async def ping(ctx):
 @client.command()
 async def help(ctx):
     file = open("help.txt", "r")
-    await ctx.send(embed = discord.Embed(title = "Pandora's commands", description = file.read(), color = 0x0078ff))
+    await ctx.send(embed = discord.Embed(title = "Asteria's commands", description = file.read(), color = 0x0078ff))
     file.close()
 
 
