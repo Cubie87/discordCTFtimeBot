@@ -9,7 +9,6 @@ Use `help` (with prefix) to see commands in Discord.
 
  - `help`: shows this command
  - `ping`: ping the bot
- - `roll` (or `r`): roll some dice
  - `ctftime` (or `ctf`): grab some information about a CTF from CTFtime
  - `ctfnow`: grab some information about current ongoing CTFs
  
@@ -28,7 +27,7 @@ To run your own instance of Asteria, you will need some extra files in the proje
 ### Files
 
 `src/env` with
-```
+```env
 DISCORD_TOKEN=[Discord token here]
 ```
 
