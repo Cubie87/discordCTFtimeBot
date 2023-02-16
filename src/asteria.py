@@ -151,7 +151,7 @@ async def ctfnow(ctx):
 async def ctfsoon(ctx):
     # grab from RSS feed
     rssFeed = ctfTime.upcomingCTFs()
-    for entry in rssFeed['entries'][:n10]:
+    for entry in rssFeed['entries'][:10]:
         title, reply = ctfTime.buildReplyRSS(entry)
         await ctx.send(embed = discord.Embed(title = title, description = reply, color = 0xFFFFFF))
 
