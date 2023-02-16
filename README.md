@@ -39,7 +39,7 @@ class botVars:
 ```
 The prefix should be a single character used as the prefix for bot commands.
 
-Then, run `docker build -t asteria .` to build the docker image, and `docker run asteria` to run pandora.
+Then, run `docker build -t asteria .` to build the docker image, and `docker run asteria` to run asteria.
 
 Alternatively, to run without docker, install dependences 
 
