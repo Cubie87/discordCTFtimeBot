@@ -77,3 +77,9 @@ def grabCtfDetails(code):
 def currentCTFs():
     # grab RSS feed
     return feedparser.parse("https://ctftime.org/event/list/running/rss/")
+
+
+# grab all upcoming CTFs
+def upcomingCTFs():
+    # grab RSS feed
+    return feedparser.parse("https://ctftime.org/event/list/upcoming/rss/")

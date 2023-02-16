@@ -136,12 +136,22 @@ async def ctftime(ctx, *, code):
         return
     await ctx.send(embed = discord.Embed(title = title, description = reply, color = 0xFFFFFF))
 
-# send some brief details about a CTFtime entry
+# send some brief details about current CTFtimes
 @client.command()
 async def ctfnow(ctx):
     # grab from RSS feed
     rssFeed = ctfTime.currentCTFs()
     for entry in rssFeed['entries']:
+        title, reply = ctfTime.buildReplyRSS(entry)
+        await ctx.send(embed = discord.Embed(title = title, description = reply, color = 0xFFFFFF))
+
+
+# send some brief details about upcoming CTFtimes
+@client.command()
+async def ctfsoon(ctx):
+    # grab from RSS feed
+    rssFeed = ctfTime.upcomingCTFs()
+    for entry in rssFeed['entries'][:n10]:
         title, reply = ctfTime.buildReplyRSS(entry)
         await ctx.send(embed = discord.Embed(title = title, description = reply, color = 0xFFFFFF))
 
