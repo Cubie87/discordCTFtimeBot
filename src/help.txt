@@ -2,3 +2,4 @@
 `ping`: ping the bot
 `ctftime` (or `ctf`): grab some information about a CTF from CTFtime
 `ctfnow`: grab some information about current ongoing CTFs
+`ctfsoon`: grab some information about upcoming CTFs

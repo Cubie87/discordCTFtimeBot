@@ -11,7 +11,7 @@ Use `help` (with prefix) to see commands in Discord.
  - `ping`: ping the bot
  - `ctftime` (or `ctf`): grab some information about a CTF from CTFtime
  - `ctfnow`: grab some information about current ongoing CTFs
- 
+ - `ctfsoon`: grab some information about upcoming CTFs
 
 The bot owner is also able to use the following commands:
  - `list`: list all the guilds that the bot is part of
