@@ -150,8 +150,18 @@ async def ctfnow(ctx):
 @client.command()
 async def ctfsoon(ctx):
     # grab from RSS feed
+    num = 5 # default number to retrieve
+    # if the user specified a number to retrieve
+    if ctx.message.content != botVars.prefix + "ctfsoon":
+        a = ctx.message.content.index(" ")
+        print(ctx.message.content[a+1:])
+        num = int(float(ctx.message.content[a+1:]))
+    # prevent retrieving too many
+    if num > len(rssFeed['entries']):
+        num = len(rssFeed['entries'])
+    # retrieve and print
     rssFeed = ctfTime.upcomingCTFs()
-    for entry in rssFeed['entries'][:10]:
+    for entry in rssFeed['entries'][slice(0,num)]:
         title, reply = ctfTime.buildReplyRSS(entry)
         await ctx.send(embed = discord.Embed(title = title, description = reply, color = 0xFFFFFF))
 
