@@ -1,4 +1,4 @@
-# Asteria
+# Discord CTFtime Bot!
 A custom discord bot :D
 
  - Forked from Pandora to separate CTFtime functionality
@@ -22,7 +22,7 @@ This allows the bot to be removed from a server without the owner being part of 
 
 
 ## Setup
-To run your own instance of Asteria, you will need some extra files in the project's `src/` directory.
+To run your own instance of this, you will need some extra files in the project's `src/` directory.
 
 ### Files
 
@@ -39,7 +39,7 @@ class botVars:
 ```
 The prefix should be a single character used as the prefix for bot commands.
 
-Then, run `docker build -t asteria .` to build the docker image, and `docker run asteria` to run asteria.
+Then, run `docker build -t discordCTFbot .` to build the docker image, and `docker run discordCTFbot` to run asteria.
 
 Alternatively, to run without docker, install dependences 
 
