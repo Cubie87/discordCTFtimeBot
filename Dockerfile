@@ -7,7 +7,7 @@ RUN apt-get install python-is-python3 python3-pip -y
 # I would add gnu screen to be able to reattach to Asteria's output
 # but docker really does not like it. Blows the build time to >2hr
 # and crashes the build. If you have a solution please let me know.
-
+ 
 # install python dependencies
 RUN pip install --upgrade pip
 RUN pip install discord.py python-dotenv
